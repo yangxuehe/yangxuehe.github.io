@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Lens by HTML5 UP</title>
+		<title>我们的故事</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,14 +19,18 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1>故事</h1>
-						<p>Just another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+            <h1>我们的故事
+              <span style="font-size:16px;">
+                (第 <span id="day-span">♾</span> 天)
+              </span>
+            </h1>
+						<p>2018/07/08 Yxh 和 Cyf 在一起了</p>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-weixin"><span
                     class="label">微信</span></a></li>
-							<li><a href="#" class="icon brands fa-weibo"><span
+							<!--<li><a href="#" class="icon brands fa-weibo"><span
                     class="label">微博</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+              <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>-->
 							<!-- <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li> -->
 						</ul>
 					</header>
@@ -34,12 +38,14 @@
 				<!-- Thumbnail -->
 					<section id="thumbnails">
 						<article>
-							<a class="thumbnail" href="images/fulls/01.jpg" data-position="left center"><img src="images/fulls/01.jpg" alt="" /></a>
+							<a class="thumbnail" href="images/fulls/20180708.jpg" data-position="left center"><img src="images/fulls/20180708.jpg" alt="" /></a>
 							<h2>Diam tempus accumsan</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 						</article>
 						<article>
-							<a class="thumbnail" href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" /></a>
+							<a class="thumbnail" href="images/fulls/20180722.jpg">
+                <img src="images/thumbs/20180722.jpg" alt="" />
+              </a>
 							<h2>Vivamus convallis libero</h2>
 							<p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
 						</article>
@@ -109,6 +115,13 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/main.js"></script>
-
+  <script>
+    $(function(){
+      var dateStart = new Date("2018-07-08");
+      var dateEnd = new Date();
+      var difValue = Math.floor((dateEnd - dateStart) / (1000 * 60 * 60 * 24));
+      $("#day-span").html(difValue);
+    });
+  </script>
 	</body>
 </html>
